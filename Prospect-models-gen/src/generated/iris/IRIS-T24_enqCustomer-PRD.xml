@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) 2012 - 2013 Temenos Holdings N.V.
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd"
+		default-lazy-init="true">
+
+<!-- Define Spring bean for resource : enqCustomers -->
+<!-- begin spring bean for state : T24_enqCustomer-enqCustomers -->
+<bean id="T24_enqCustomer-enqCustomers" class="com.temenos.interaction.core.hypermedia.CollectionResourceState">
+	<constructor-arg name="entityName" value="enqCustomer" />
+	<constructor-arg name="name" value="enqCustomers" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg name="name" value="GETEntities" />
+			<constructor-arg name="type" value="VIEW" />
+			<constructor-arg name="props">
+				<props>
+				<prop key="filter">{filter}</prop>
+				</props>
+			</constructor-arg>
+			<constructor-arg name="method" value="GET" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/{companyid}/enqCustomers()" />
+	<constructor-arg name="rels">
+		<null />
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><bean class="com.temenos.interaction.core.hypermedia.UriSpecification"><constructor-arg name="name" value="enqCustomers" /><constructor-arg name="template" value="/{companyid}/enqCustomers()" /></bean></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+	<!-- begin transition : T24_enqCustomer-enqCustomer -->
+	<bean class="com.temenos.interaction.springdsl.TransitionFactoryBean">
+		<property name="flags"><util:constant static-field="com.temenos.interaction.core.hypermedia.Transition.FOR_EACH"/></property>
+		<property name="method" value="GET" />
+		<property name="target"><bean class="com.temenos.interaction.core.hypermedia.LazyResourceState"><constructor-arg name="name" value="T24_enqCustomer-enqCustomer" /></bean>
+		
+		</property>
+	
+		<property name="uriParameters"><util:map> 	   
+		<entry key="id" value="{Id}"/>	  
+		</util:map>
+		</property>
+		<property name="evaluation">
+			<null />
+		</property>
+		<property name="label" value="enqCustomer" />
+		<property name="linkId" value="" />
+	</bean>
+	<!-- end transition : T24_enqCustomer-enqCustomer -->
+	<!-- begin transition : T24_verCustomer-verCustomer_see -->
+	<bean class="com.temenos.interaction.springdsl.TransitionFactoryBean">
+		<property name="flags"><util:constant static-field="com.temenos.interaction.core.hypermedia.Transition.FOR_EACH"/></property>
+		<property name="method" value="GET" />
+		<property name="target"><bean class="com.temenos.interaction.core.hypermedia.LazyResourceState"><constructor-arg name="name" value="T24_verCustomer-verCustomer_see" /></bean>
+		
+		</property>
+	
+		<property name="uriParameters"><util:map> 	   
+		<entry key="id" value="{Id}"/>	  
+		<entry key="t24Intent" value="View"/>	  
+		</util:map>
+		</property>
+		<property name="evaluation">
+			<null />
+		</property>
+		<property name="label" value="View Record" />
+		<property name="linkId" value="1" />
+		<property name="sourceField" value="Id" />
+	</bean>
+	<!-- end transition : T24_verCustomer-verCustomer_see -->
+	<!-- begin transition : T24_enqListLoans-enqListLoanss -->
+	<bean class="com.temenos.interaction.springdsl.TransitionFactoryBean">
+		<property name="flags"><util:constant static-field="com.temenos.interaction.core.hypermedia.Transition.FOR_EACH"/></property>
+		<property name="method" value="GET" />
+		<property name="target"><bean class="com.temenos.interaction.core.hypermedia.LazyResourceState"><constructor-arg name="name" value="T24_enqListLoans-enqListLoanss" /></bean>
+		
+		</property>
+	
+		<property name="uriParameters"><util:map> 	   
+		<entry key="filter" value="CustomerNo eq '{Id}'"/>	  
+		</util:map>
+		</property>
+		<property name="evaluation">
+			<null />
+		</property>
+		<property name="label" value="Primarily &amp; Jointly held Loans" />
+		<property name="linkId" value="2" />
+		<property name="sourceField" value="Id" />
+	</bean>
+	<!-- end transition : T24_enqListLoans-enqListLoanss -->
+	<!-- begin transition : T24_enqCustomerPositionSummary-enqCustomerPositionSummarys -->
+	<bean class="com.temenos.interaction.springdsl.TransitionFactoryBean">
+		<property name="flags"><util:constant static-field="com.temenos.interaction.core.hypermedia.Transition.FOR_EACH"/></property>
+		<property name="method" value="GET" />
+		<property name="target"><bean class="com.temenos.interaction.core.hypermedia.LazyResourceState"><constructor-arg name="name" value="T24_enqCustomerPositionSummary-enqCustomerPositionSummarys" /></bean>
+		
+		</property>
+	
+		<property name="uriParameters"><util:map> 	   
+		<entry key="filter" value="CustomerNo eq '{Id}'"/>	  
+		</util:map>
+		</property>
+		<property name="evaluation">
+			<null />
+		</property>
+		<property name="label" value="Customer Position Summary" />
+		<property name="linkId" value="3" />
+		<property name="sourceField" value="Id" />
+	</bean>
+	<!-- end transition : T24_enqCustomerPositionSummary-enqCustomerPositionSummarys -->
+	<!-- begin transition : T24_enqLiab-enqLiabs -->
+	<bean class="com.temenos.interaction.springdsl.TransitionFactoryBean">
+		<property name="flags"><util:constant static-field="com.temenos.interaction.core.hypermedia.Transition.FOR_EACH"/></property>
+		<property name="method" value="GET" />
+		<property name="target"><bean class="com.temenos.interaction.core.hypermedia.LazyResourceState"><constructor-arg name="name" value="T24_enqLiab-enqLiabs" /></bean>
+		
+		</property>
+	
+		<property name="uriParameters"><util:map> 	   
+		<entry key="filter" value="LiabilityNumber eq '{Id}'"/>	  
+		</util:map>
+		</property>
+		<property name="evaluation">
+			<null />
+		</property>
+		<property name="label" value="Customer Liability" />
+		<property name="linkId" value="4" />
+		<property name="sourceField" value="Id" />
+	</bean>
+	<!-- end transition : T24_enqLiab-enqLiabs -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : T24_enqCustomer-enqCustomers -->		
+<!-- Define Spring bean for resource : enqCustomer -->
+<!-- begin spring bean for state : T24_enqCustomer-enqCustomer -->
+<bean id="T24_enqCustomer-enqCustomer" class="com.temenos.interaction.core.hypermedia.ResourceState">
+	<constructor-arg name="entityName" value="enqCustomer" />
+	<constructor-arg name="name" value="enqCustomer" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg name="name" value="GETEntity" />
+			<constructor-arg name="type" value="VIEW" />
+			<constructor-arg name="props"><null /></constructor-arg>
+			<constructor-arg name="method" value="GET" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/{companyid}/enqCustomers('{id}')" />
+	<constructor-arg name="rels">
+		<null />
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><bean class="com.temenos.interaction.core.hypermedia.UriSpecification"><constructor-arg name="name" value="enqCustomer" /><constructor-arg name="template" value="/{companyid}/enqCustomers('{id}')" /></bean></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : T24_enqCustomer-enqCustomer -->		
+<!-- Define Spring bean for resource : enqCustomers_Print -->
+<!-- begin spring bean for state : T24_enqCustomer-enqCustomers_Print -->
+<bean id="T24_enqCustomer-enqCustomers_Print" class="com.temenos.interaction.core.hypermedia.CollectionResourceState">
+	<constructor-arg name="entityName" value="enqCustomer" />
+	<constructor-arg name="name" value="enqCustomers_Print" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg name="name" value="GETEntities" />
+			<constructor-arg name="type" value="VIEW" />
+			<constructor-arg name="props">
+				<props>
+				<prop key="filter">{filter}</prop>
+				</props>
+			</constructor-arg>
+			<constructor-arg name="method" value="GET" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/{companyid}/enqCustomers()/Print" />
+	<constructor-arg name="rels">
+		<null />
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><bean class="com.temenos.interaction.core.hypermedia.UriSpecification"><constructor-arg name="name" value="enqCustomers_Print" /><constructor-arg name="template" value="/{companyid}/enqCustomers()/Print" /></bean></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : T24_enqCustomer-enqCustomers_Print -->		
+<!-- Define Spring bean for resource : enqCustomer_Print -->
+<!-- begin spring bean for state : T24_enqCustomer-enqCustomer_Print -->
+<bean id="T24_enqCustomer-enqCustomer_Print" class="com.temenos.interaction.core.hypermedia.ResourceState">
+	<constructor-arg name="entityName" value="enqCustomer" />
+	<constructor-arg name="name" value="enqCustomer_Print" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg name="name" value="GETEntity" />
+			<constructor-arg name="type" value="VIEW" />
+			<constructor-arg name="props"><null /></constructor-arg>
+			<constructor-arg name="method" value="GET" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/{companyid}/enqCustomers('{id}')/Print" />
+	<constructor-arg name="rels">
+		<null />
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><bean class="com.temenos.interaction.core.hypermedia.UriSpecification"><constructor-arg name="name" value="enqCustomer_Print" /><constructor-arg name="template" value="/{companyid}/enqCustomers('{id}')/Print" /></bean></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : T24_enqCustomer-enqCustomer_Print -->		
+</beans>

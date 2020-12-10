@@ -1,0 +1,13 @@
+!SESSION 2020-11-30 01:31:06.507 -----------------------------------------------
+eclipse.buildId=8.0.0.20120704062212I
+java.version=1.8.0_121
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Framework arguments:  -application com.odcgroup.workbench.generation.headless
+Command-line arguments:  -application com.odcgroup.workbench.generation.headless -data D:\DesignStudioT24-R20.63\workspace\Prospect-models-gen\target\workspace -clean
+
+!ENTRY com.odcgroup.workbench.core 1 0 2020-11-30 01:31:22.396
+!MESSAGE Target Platform selected: 20.0.0.20200425194254 (default version). Available versions found: [].
+
+!ENTRY org.eclipse.core.resources 2 10035 2020-11-30 01:31:26.119
+!MESSAGE The workspace will exit with unsaved changes in this session.

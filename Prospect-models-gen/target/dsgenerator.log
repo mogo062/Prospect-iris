@@ -1,0 +1,251 @@
+### DSGEN: 2020-11-30 01:31:16,907 INFO  c.o.t.h.T24HeadlessGenStartupCore,58: 2 No of contributor plugin for Setup
+### DSGEN: 2020-11-30 01:31:16,911 INFO  c.o.t.h.T24HeadlessGenStartupCore,61: Contributor plugin came for setup com.temenos.ds.iris.headlessgenstartup
+### DSGEN: 2020-11-30 01:31:16,914 INFO  c.o.t.h.T24HeadlessGenStartupCore,65: Calling setup for com.temenos.ds.iris.headlessgenstartup plugin
+### DSGEN: 2020-11-30 01:31:16,916 INFO  c.t.d.i.h.IRISHeadlessGenStartup,16: Setup method called for IRISHeadlessGenStartup
+### DSGEN: 2020-11-30 01:31:16,942 INFO  c.t.d.i.h.IRISHeadlessGenStartup,18: Setup method RIMDslStandaloneSetup called
+### DSGEN: 2020-11-30 01:31:16,942 INFO  c.o.t.h.T24HeadlessGenStartupCore,61: Contributor plugin came for setup com.temenos.t24.api.headlessgenstartup
+### DSGEN: 2020-11-30 01:31:16,953 INFO  c.o.t.h.T24HeadlessGenStartupCore,65: Calling setup for com.temenos.t24.api.headlessgenstartup plugin
+### DSGEN: 2020-11-30 01:31:16,954 INFO  c.t.t.a.h.APIHeadlessGenStartup,15: Setup method called for APIHeadlessGenStartup
+### DSGEN: 2020-11-30 01:31:17,012 INFO  c.t.t.a.h.APIHeadlessGenStartup,17: Setup method ModelStandaloneSetup called
+### DSGEN: 2020-11-30 01:31:17,049 INFO  c.t.t.a.h.APIHeadlessGenStartup,20: Setup method InventoryDSLStandaloneSetup called
+### DSGEN: 2020-11-30 01:31:17,099 INFO  c.t.t.a.h.APIHeadlessGenStartup,23: Setup method ended for APIHeadlessGenStartup
+### DSGEN: 2020-11-30 01:31:17,128 INFO  c.o.w.core.app.AbstractDSApplication,66: This is the DS Generator version 20.57 (revision: a6acdc4254f0628949fcfc886212f69d1d67ab0d)
+### DSGEN: 2020-11-30 01:31:17,131 INFO  c.o.w.core.app.AbstractDSApplication,24: Heap stats; used: 76 MB, free: 671 MB, total: 748 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:17,135 INFO  c.o.w.core.helper.FeatureSwitches,522: DS Feature Switch: ds.resource.cache.maxsize=-1
+### DSGEN: 2020-11-30 01:31:17,136 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.dataset.cache.enabled=true
+### DSGEN: 2020-11-30 01:31:17,137 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.gen.xml.failonerror=true
+### DSGEN: 2020-11-30 01:31:17,138 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.jbc.dssubroutine.enabled=true
+### DSGEN: 2020-11-30 01:31:17,138 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.bt.iris.disabled=false
+### DSGEN: 2020-11-30 01:31:17,139 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.gen.filteredModels.file=
+### DSGEN: 2020-11-30 01:31:17,139 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.core.import.model.releaseIds=
+### DSGEN: 2020-11-30 01:31:17,139 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.delta.package.filter.file=
+### DSGEN: 2020-11-30 01:31:17,140 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.server.properties.file=
+### DSGEN: 2020-11-30 01:31:17,140 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.applications.import.folder=
+### DSGEN: 2020-11-30 01:31:17,141 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.applications.import.filterfile=
+### DSGEN: 2020-11-30 01:31:17,142 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.applications.invalid.check=false
+### DSGEN: 2020-11-30 01:31:17,142 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.models.import.no.subfolder=false
+### DSGEN: 2020-11-30 01:31:17,142 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.models.import.folder.structure=
+### DSGEN: 2020-11-30 01:31:17,143 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.models.import.default.product=NOPROD
+### DSGEN: 2020-11-30 01:31:17,143 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.models.import.default.component=NO_Component
+### DSGEN: 2020-11-30 01:31:17,144 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.import.filteredModels.file=
+### DSGEN: 2020-11-30 01:31:17,144 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.application.import.local=false
+### DSGEN: 2020-11-30 01:31:17,145 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.application.import.datafolder=
+### DSGEN: 2020-11-30 01:31:17,145 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.models.toImport=
+### DSGEN: 2020-11-30 01:31:17,146 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.domain.jvmtypes=true
+### DSGEN: 2020-11-30 01:31:17,146 INFO  c.o.w.core.helper.FeatureSwitches,522: DS Feature Switch: ds.domain.ecore=1
+### DSGEN: 2020-11-30 01:31:17,147 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.gen.refreshOutputFolders=true
+### DSGEN: 2020-11-30 01:31:17,147 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.gen.headless.stop=true
+### DSGEN: 2020-11-30 01:31:17,148 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.gen.memory.autoclean=true
+### DSGEN: 2020-11-30 01:31:17,148 INFO  c.o.w.core.helper.FeatureSwitches,522: DS Feature Switch: ds.gen.memory.autoclean.strategy=2
+### DSGEN: 2020-11-30 01:31:17,148 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.gen.fake=false
+### DSGEN: 2020-11-30 01:31:17,149 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.ignoreValidationErrors=true
+### DSGEN: 2020-11-30 01:31:17,150 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.skipDomainGenerationForIRIS=true
+### DSGEN: 2020-11-30 01:31:17,150 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.skipRimGenerationForIRIS=true
+### DSGEN: 2020-11-30 01:31:17,150 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.xtext.builder.free=true
+### DSGEN: 2020-11-30 01:31:17,151 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.xtext.builder.parallel=true
+### DSGEN: 2020-11-30 01:31:17,151 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.checkInfiniteCallInLogger=false
+### DSGEN: 2020-11-30 01:31:17,151 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.checkInfiniteCallInLoggerSneakyThrow=false
+### DSGEN: 2020-11-30 01:31:17,152 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.gen.iris.outdir=null
+### DSGEN: 2020-11-30 01:31:17,152 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.gen.edge.datadir=null
+### DSGEN: 2020-11-30 01:31:17,152 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.gen.auto=false
+### DSGEN: 2020-11-30 01:31:17,153 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.checkNameConflicts=true
+### DSGEN: 2020-11-30 01:31:17,153 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.iris.metadata.selection.fields.only=true
+### DSGEN: 2020-11-30 01:31:17,153 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.gen.defaultversions=false
+### DSGEN: 2020-11-30 01:31:17,154 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.gen.data.format=data.eson
+### DSGEN: 2020-11-30 01:31:17,155 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.deploy.eson.connection=DesignStudioInstaller
+### DSGEN: 2020-11-30 01:31:17,155 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.deploy.eson.addNoInputFields=false
+### DSGEN: 2020-11-30 01:31:17,156 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.gen.data.format.singleByte=false
+### DSGEN: 2020-11-30 01:31:17,157 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.gen.active.profiles=default
+### DSGEN: 2020-11-30 01:31:17,157 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.gen.activate.profiles=false
+### DSGEN: 2020-11-30 01:31:17,157 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.iris.useFieldLabelAsName=false
+### DSGEN: 2020-11-30 01:31:17,157 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.duplicate.model.asWarning=false
+### DSGEN: 2020-11-30 01:31:17,158 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.import.coreModels.lineReturnChars=
+### DSGEN: 2020-11-30 01:31:17,158 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.validation.disabled.in.folders=
+### DSGEN: 2020-11-30 01:31:17,158 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.headless.junit.folder=
+### DSGEN: 2020-11-30 01:31:17,160 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.show.internal.templates=false
+### DSGEN: 2020-11-30 01:31:17,160 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.api.generation.test.structure=false
+### DSGEN: 2020-11-30 01:31:17,161 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.bulkImport.models.csvFilePath=
+### DSGEN: 2020-11-30 01:31:17,161 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.bulkImport.modelsAsDataEsons=false
+### DSGEN: 2020-11-30 01:31:17,162 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.data.eson.multicompany=false
+### DSGEN: 2020-11-30 01:31:17,162 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.bulkImport.dataEsonsProjectPath=
+### DSGEN: 2020-11-30 01:31:17,162 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.data.eson.validations=true
+### DSGEN: 2020-11-30 01:31:17,162 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.run.resource.validations=false
+### DSGEN: 2020-11-30 01:31:17,162 INFO  c.o.w.core.helper.FeatureSwitches,573: DS Feature Switch: ds.t24.models.toImport.model=Normal
+### DSGEN: 2020-11-30 01:31:17,163 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.t24.models.toImport.l3.prefixes=
+### DSGEN: 2020-11-30 01:31:17,163 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.models.toImport.analysis.skip=false
+### DSGEN: 2020-11-30 01:31:17,164 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.models.toImport.use.model.importers=false
+### DSGEN: 2020-11-30 01:31:17,164 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.models.clear.previous.l3.analysis=false
+### DSGEN: 2020-11-30 01:31:17,165 INFO  c.o.w.core.helper.FeatureSwitches,553: DS Feature Switch: ds.core.import.model.releaseIds=
+### DSGEN: 2020-11-30 01:31:17,165 INFO  c.o.w.core.helper.FeatureSwitches,537: DS Feature Switch: ds.t24.l3.reconciliation.asWarning=true
+### DSGEN: 2020-11-30 01:31:17,166 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vendor = Oracle Corporation
+### DSGEN: 2020-11-30 01:31:17,167 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.bundles.defaultStartLevel = 4
+### DSGEN: 2020-11-30 01:31:17,168 INFO  c.o.w.core.app.AbstractDSApplication,134: os.name = Windows 10
+### DSGEN: 2020-11-30 01:31:17,169 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.ws = win32
+### DSGEN: 2020-11-30 01:31:17,169 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.specification.vendor = Oracle Corporation
+### DSGEN: 2020-11-30 01:31:17,169 INFO  c.o.w.core.app.AbstractDSApplication,134: java.runtime.version = 1.8.0_121-b13
+### DSGEN: 2020-11-30 01:31:17,170 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.instance.area = file:/D:/DesignStudioT24-R20.63/workspace/Prospect-models-gen/target/workspace/
+### DSGEN: 2020-11-30 01:31:17,170 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.framework.extensions = 
+### DSGEN: 2020-11-30 01:31:17,170 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.syspath = d:\DesignStudioT24-R20.63\t24-binaries\com\temenos\ds\DesignStudioT24-Generator\20.57\ds\plugins
+### DSGEN: 2020-11-30 01:31:17,170 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.compatibility.bootdelegation.default = true
+### DSGEN: 2020-11-30 01:31:17,171 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.compatibility.bootdelegation = true
+### DSGEN: 2020-11-30 01:31:17,171 INFO  c.o.w.core.app.AbstractDSApplication,134: java.version = 1.8.0_121
+### DSGEN: 2020-11-30 01:31:17,171 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.bundles = reference:file:org.eclipse.equinox.simpleconfigurator_1.1.200.v20160504-1450.jar@1:start
+### DSGEN: 2020-11-30 01:31:17,172 INFO  c.o.w.core.app.AbstractDSApplication,134: java.endorsed.dirs = D:\DesignStudioT24-R20.63\jdk\jre\lib\endorsed
+### DSGEN: 2020-11-30 01:31:17,172 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.tracefile = D:\DesignStudioT24-R20.63\workspace\Prospect-models-gen\target\workspace\.metadata\trace.log
+### DSGEN: 2020-11-30 01:31:17,174 INFO  c.o.w.core.app.AbstractDSApplication,134: java.specification.name = Java Platform API Specification
+### DSGEN: 2020-11-30 01:31:17,174 INFO  c.o.w.core.app.AbstractDSApplication,134: java.class.version = 52.0
+### DSGEN: 2020-11-30 01:31:17,174 INFO  c.o.w.core.app.AbstractDSApplication,134: java.home = D:\DesignStudioT24-R20.63\jdk\jre
+### DSGEN: 2020-11-30 01:31:17,175 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.os = win32
+### DSGEN: 2020-11-30 01:31:17,175 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.info = mixed mode
+### DSGEN: 2020-11-30 01:31:17,175 INFO  c.o.w.core.app.AbstractDSApplication,134: os.version = 10.0
+### DSGEN: 2020-11-30 01:31:17,175 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.arch = x86_64
+### DSGEN: 2020-11-30 01:31:17,175 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.version = 25.121-b13
+### DSGEN: 2020-11-30 01:31:17,176 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.framework.shape = jar
+### DSGEN: 2020-11-30 01:31:17,176 INFO  c.o.w.core.app.AbstractDSApplication,134: java.awt.printerjob = sun.awt.windows.WPrinterJob
+### DSGEN: 2020-11-30 01:31:17,176 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.install.area = file:/D:/DesignStudioT24-R20.63/t24-binaries/com/temenos/ds/DesignStudioT24-Generator/20.57/ds/
+### DSGEN: 2020-11-30 01:31:17,176 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.framework = file:/d:/DesignStudioT24-R20.63/t24-binaries/com/temenos/ds/DesignStudioT24-Generator/20.57/ds/plugins/org.eclipse.osgi_3.12.0.v20170118-2208.jar
+### DSGEN: 2020-11-30 01:31:17,177 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.framework.useSystemProperties = true
+### DSGEN: 2020-11-30 01:31:17,177 INFO  c.o.w.core.app.AbstractDSApplication,134: java.specification.vendor = Oracle Corporation
+### DSGEN: 2020-11-30 01:31:17,177 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.nl = fr_FR
+### DSGEN: 2020-11-30 01:31:17,177 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vendor.url = http://java.oracle.com/
+### DSGEN: 2020-11-30 01:31:17,178 INFO  c.o.w.core.app.AbstractDSApplication,134: java.library.path = D:\DesignStudioT24-R20.63\jdk\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;D:\DesignStudioT24-R20.63\jdk\jre\bin;D:\0.Software\0.RDBMS\0.ORACLE\WINDOWS.X64_193000_db_home\bin;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Git\cmd;C:\Program Files\TortoiseGit\bin;C:\Users\MONGI GUESMI\AppData\Local\Microsoft\WindowsApps;C:\Users\MONGI GUESMI\AppData\Local\GitHubDesktop\bin;C:\Users\MONGI GUESMI\AppData\Local\atom\bin;D:\DesignStudioT24-R20.63\TAFJ\bin;C:\Program Files\Java\jdk1.8.0_271\bin;;.
+### DSGEN: 2020-11-30 01:31:17,178 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.vendor = Oracle Corporation
+### DSGEN: 2020-11-30 01:31:17,178 INFO  c.o.w.core.app.AbstractDSApplication,134: java.runtime.name = Java(TM) SE Runtime Environment
+### DSGEN: 2020-11-30 01:31:17,178 INFO  c.o.w.core.app.AbstractDSApplication,134: java.class.path = D:\DesignStudioT24-R20.63\t24-binaries\com\temenos\ds\DesignStudioT24-Generator\20.57\ds\plugins\org.eclipse.equinox.launcher_1.3.201.v20161025-1711.jar
+### DSGEN: 2020-11-30 01:31:17,179 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.specification.name = Java Virtual Machine Specification
+### DSGEN: 2020-11-30 01:31:17,179 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.specification.version = 1.8
+### DSGEN: 2020-11-30 01:31:17,179 INFO  c.o.w.core.app.AbstractDSApplication,134: java.io.tmpdir = C:\Users\MONGIG~1\AppData\Local\Temp\
+### DSGEN: 2020-11-30 01:31:17,179 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vendor.url.bug = http://bugreport.sun.com/bugreport/
+### DSGEN: 2020-11-30 01:31:17,180 INFO  c.o.w.core.app.AbstractDSApplication,134: java.awt.graphicsenv = sun.awt.Win32GraphicsEnvironment
+### DSGEN: 2020-11-30 01:31:17,180 INFO  c.o.w.core.app.AbstractDSApplication,134: os.arch = amd64
+### DSGEN: 2020-11-30 01:31:17,180 INFO  c.o.w.core.app.AbstractDSApplication,134: java.ext.dirs = D:\DesignStudioT24-R20.63\jdk\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext
+### DSGEN: 2020-11-30 01:31:17,180 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.clean = true
+### DSGEN: 2020-11-30 01:31:17,180 INFO  c.o.w.core.app.AbstractDSApplication,134: java.vm.name = Java HotSpot(TM) 64-Bit Server VM
+### DSGEN: 2020-11-30 01:31:17,181 INFO  c.o.w.core.app.AbstractDSApplication,134: java.specification.version = 1.8
+### DSGEN: 2020-11-30 01:31:17,181 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.configuration.area = file:/D:/DesignStudioT24-R20.63/t24-binaries/com/temenos/ds/DesignStudioT24-Generator/20.57/ds/configuration/
+### DSGEN: 2020-11-30 01:31:17,181 INFO  c.o.w.core.app.AbstractDSApplication,134: osgi.logfile = D:\DesignStudioT24-R20.63\workspace\Prospect-models-gen\target\workspace\.metadata\.log
+### DSGEN: 2020-11-30 01:31:17,182 INFO  c.o.w.core.app.AbstractDSApplication,141: JVM Default locale: fr_FR, platform encoding: UTF-8
+### DSGEN: 2020-11-30 01:31:17,182 INFO  c.o.w.generation.headless.RunGeneration,74: Preparing workspace meta-data...
+### DSGEN: 2020-11-30 01:31:18,486 INFO  c.o.w.core.app.AbstractDSApplication,24: Heap stats; used: 101 MB, free: 647 MB, total: 748 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:18,487 INFO  c.o.w.core.app.AbstractDSApplication,254: Updating project configurations...
+### DSGEN: 2020-11-30 01:31:22,398 INFO  com.odcgroup.workbench.core,69: Target Platform selected: 20.0.0.20200425194254 (default version). Available versions found: [].
+### DSGEN: 2020-11-30 01:31:22,570 INFO  c.o.w.generation.headless.RunGeneration,24: Heap stats; used: 223 MB, free: 633 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:22,572 INFO  c.o.w.generation.headless.RunGeneration,80: Validating model dependencies...
+### DSGEN: 2020-11-30 01:31:22,598 INFO  DSGeneratorTiming,89: Migration and loading of models Projects
+
+### DSGEN: 2020-11-30 01:31:22,599 INFO  DSGeneratorTiming,90: Started at 2020.11.30 01:31:22
+### DSGEN: 2020-11-30 01:31:22,600 INFO  c.o.w.generation.headless.RunGeneration,91: Migrating models...
+### DSGEN: 2020-11-30 01:31:22,843 INFO  c.o.w.generation.headless.RunGeneration,95: Temporarily migrating translations into models...
+### DSGEN: 2020-11-30 01:31:22,846 INFO  c.o.w.generation.headless.RunGeneration,98: Building model projects...
+### DSGEN: 2020-11-30 01:31:23,026 INFO  DSGeneratorTiming,104: Completed at: 2020.11.30 01:31:23
+### DSGEN: 2020-11-30 01:31:23,034 INFO  DSGeneratorTiming,106: Took: 0,434s
+### DSGEN: 2020-11-30 01:31:23,036 INFO  DSGeneratorTiming,107: Total number of models: 26
+### DSGEN: 2020-11-30 01:31:23,036 INFO  DSGeneratorTiming,108: ----------------------------------------------------------------------------
+
+### DSGEN: 2020-11-30 01:31:23,037 INFO  c.o.w.generation.headless.RunGeneration,24: Heap stats; used: 262 MB, free: 595 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:23,038 INFO  c.o.w.generation.headless.RunGeneration,114: Validating models of packaged dependencies...
+### DSGEN: 2020-11-30 01:31:23,038 INFO  c.o.w.generation.headless.RunGeneration,24: Heap stats; used: 262 MB, free: 595 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:23,038 INFO  c.o.w.generation.headless.RunGeneration,121: Starting code generation...
+### DSGEN: 2020-11-30 01:31:23,039 INFO  c.o.w.generation.headless.RunGeneration,332: Generating code for project 'Prospect-models' ...
+### DSGEN: 2020-11-30 01:31:23,047 INFO  c.o.w.generation.GenerationCommon,162: About to run 4 new-style and 0 classic style code generators
+### DSGEN: 2020-11-30 01:31:23,052 INFO  DSGeneratorTiming,223: Pre Loading and validation of Resources in Standalone Headless 
+
+### DSGEN: 2020-11-30 01:31:23,053 INFO  DSGeneratorTiming,224: Started at: 2020.11.30 01:31:23
+### DSGEN: 2020-11-30 01:31:23,054 INFO  c.o.w.generation.GenerationCommon,535: About to pre-load 26 models...
+### DSGEN: 2020-11-30 01:31:23,676 INFO  c.o.w.generation.GenerationCommon,553: About to index models...
+### DSGEN: 2020-11-30 01:31:23,768 INFO  c.o.w.generation.GenerationCommon,555: Done indexing 26 models in 0,092s
+### DSGEN: 2020-11-30 01:31:23,769 INFO  c.o.w.generation.GenerationCommon,557: Done pre-loading 26 models (req. for CodeGenerator2 cross refs) in 0,716s
+### DSGEN: 2020-11-30 01:31:23,770 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 280 MB, free: 576 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:23,775 INFO  c.o.w.generation.GenerationCommon,450: About to validate 26 models...
+### DSGEN: 2020-11-30 01:31:24,133 INFO  c.o.w.generation.GenerationCommon,486: Done validating 26 models in 0,362s
+### DSGEN: 2020-11-30 01:31:24,133 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 301 MB, free: 555 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:24,134 WARN  DSGeneratorSummary,489: Validation started   at : 2020.11.30 01:31:23
+### DSGEN: 2020-11-30 01:31:24,135 WARN  DSGeneratorSummary,495: No Errors Found.
+### DSGEN: 2020-11-30 01:31:24,136 WARN  DSGeneratorSummary,497: Validation completed at : 2020.11.30 01:31:24 (took : 0,362s)
+### DSGEN: 2020-11-30 01:31:24,138 INFO  DSGeneratorTiming,233: Completed at: 2020.11.30 01:31:24
+### DSGEN: 2020-11-30 01:31:24,139 INFO  DSGeneratorTiming,235: Took: 1,086s
+### DSGEN: 2020-11-30 01:31:24,140 INFO  DSGeneratorTiming,236: Total number of resources: 26
+### DSGEN: 2020-11-30 01:31:24,141 INFO  DSGeneratorTiming,238: ----------------------------------------------------------------------------
+
+### DSGEN: 2020-11-30 01:31:24,156 INFO  DSGeneratorTiming,289: T24 Interaction Framework (IRIS): Java classes from IRIS RIM model Generator 
+
+### DSGEN: 2020-11-30 01:31:24,157 INFO  DSGeneratorTiming,290: Started at: 2020.11.30 01:31:24
+### DSGEN: 2020-11-30 01:31:24,159 INFO  c.o.w.generation.GenerationCommon,582: Generating code, cartridge T24 Interaction Framework (IRIS): Java classes from IRIS RIM model into F/Prospect-models-gen/src/generated/iris ...
+### DSGEN: 2020-11-30 01:31:24,518 INFO  c.o.w.generation.GenerationCommon,594: Completed successfully generating code for cartridge T24 Interaction Framework (IRIS): Java classes from IRIS RIM model, it took 0,356s
+### DSGEN: 2020-11-30 01:31:24,518 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 338 MB, free: 518 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:24,519 INFO  DSGeneratorTiming,314: Completed at: 2020.11.30 01:31:24
+### DSGEN: 2020-11-30 01:31:24,520 INFO  DSGeneratorTiming,316: Took: 0,362s
+### DSGEN: 2020-11-30 01:31:24,520 INFO  DSGeneratorTiming,317: Number of models used by this generator: 12
+### DSGEN: 2020-11-30 01:31:24,521 INFO  DSGeneratorTiming,318: ----------------------------------------------------------------------------
+
+### DSGEN: 2020-11-30 01:31:24,535 INFO  DSGeneratorTiming,289: T24 Interaction Framework (IRIS) Metadata: Configuration (metadata.xml, *.properties) Generator 
+
+### DSGEN: 2020-11-30 01:31:24,538 INFO  DSGeneratorTiming,290: Started at: 2020.11.30 01:31:24
+### DSGEN: 2020-11-30 01:31:24,539 INFO  c.o.w.generation.GenerationCommon,582: Generating code, cartridge T24 Interaction Framework (IRIS) Metadata: Configuration (metadata.xml, *.properties) into F/Prospect-models-gen/src/generated/iris ...
+### DSGEN: 2020-11-30 01:31:24,563 WARN  com.odcgroup.t24.enquiry.util.EMUtils,194: Underlying application CUSTOMER requested, not found in project
+### DSGEN: 2020-11-30 01:31:24,631 WARN  com.odcgroup.t24.enquiry.util.EMUtils,194: Underlying application ACCOUNT requested, not found in project
+### DSGEN: 2020-11-30 01:31:25,692 INFO  c.o.w.generation.GenerationCommon,594: Completed successfully generating code for cartridge T24 Interaction Framework (IRIS) Metadata: Configuration (metadata.xml, *.properties), it took 1,152s
+### DSGEN: 2020-11-30 01:31:25,693 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 561 MB, free: 296 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:25,693 INFO  DSGeneratorTiming,314: Completed at: 2020.11.30 01:31:25
+### DSGEN: 2020-11-30 01:31:25,694 INFO  DSGeneratorTiming,316: Took: 1,157s
+### DSGEN: 2020-11-30 01:31:25,695 INFO  DSGeneratorTiming,317: Number of models used by this generator: 14
+### DSGEN: 2020-11-30 01:31:25,695 INFO  DSGeneratorTiming,318: ----------------------------------------------------------------------------
+
+### DSGEN: 2020-11-30 01:31:25,708 INFO  DSGeneratorTiming,289: T24 Interaction Framework (RIM): Resource model (RIM) from T24 models Generator 
+
+### DSGEN: 2020-11-30 01:31:25,708 INFO  DSGeneratorTiming,290: Started at: 2020.11.30 01:31:25
+### DSGEN: 2020-11-30 01:31:25,711 INFO  c.o.w.generation.GenerationCommon,582: Generating code, cartridge T24 Interaction Framework (RIM): Resource model (RIM) from T24 models into F/Prospect-models/rim/gen ...
+### DSGEN: 2020-11-30 01:31:25,713 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/enquiry/CUSTOMER.enquiry]
+### DSGEN: 2020-11-30 01:31:25,714 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/enquiry/CUSTOMER.enquiry]
+### DSGEN: 2020-11-30 01:31:25,715 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/enquiry/ACCOUNT-LIST.enquiry]
+### DSGEN: 2020-11-30 01:31:25,715 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/enquiry/ACCOUNT-LIST.enquiry]
+### DSGEN: 2020-11-30 01:31:25,717 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/businessTypes/BusinessTypes.domain]
+### DSGEN: 2020-11-30 01:31:25,717 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/businessTypes/BusinessTypes.domain]
+### DSGEN: 2020-11-30 01:31:25,719 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Search.domain]
+### DSGEN: 2020-11-30 01:31:25,720 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Search.domain]
+### DSGEN: 2020-11-30 01:31:25,720 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Process.domain]
+### DSGEN: 2020-11-30 01:31:25,720 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Process.domain]
+### DSGEN: 2020-11-30 01:31:25,720 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/OData.domain]
+### DSGEN: 2020-11-30 01:31:25,721 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/OData.domain]
+### DSGEN: 2020-11-30 01:31:25,723 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/NextState.domain]
+### DSGEN: 2020-11-30 01:31:25,723 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/NextState.domain]
+### DSGEN: 2020-11-30 01:31:25,724 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Metadata.domain]
+### DSGEN: 2020-11-30 01:31:25,724 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Metadata.domain]
+### DSGEN: 2020-11-30 01:31:25,724 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Message.domain]
+### DSGEN: 2020-11-30 01:31:25,725 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Message.domain]
+### DSGEN: 2020-11-30 01:31:25,725 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Menu.domain]
+### DSGEN: 2020-11-30 01:31:25,726 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Menu.domain]
+### DSGEN: 2020-11-30 01:31:25,726 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Forecast.domain]
+### DSGEN: 2020-11-30 01:31:25,727 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Forecast.domain]
+### DSGEN: 2020-11-30 01:31:25,727 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Error.domain]
+### DSGEN: 2020-11-30 01:31:25,727 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Error.domain]
+### DSGEN: 2020-11-30 01:31:25,728 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/Enrichment.domain]
+### DSGEN: 2020-11-30 01:31:25,728 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/Enrichment.domain]
+### DSGEN: 2020-11-30 01:31:25,729 INFO  c.o.i.r.g.T24ResourceModelsGenerator,157: Generate RIM [platform:/resource/Prospect-models/domain/Prospect/DealSlip.domain]
+### DSGEN: 2020-11-30 01:31:25,729 INFO  c.o.i.r.g.T24ResourceModelsGenerator,281: Skiping the generation of the RIM [platform:/resource/Prospect-models/domain/Prospect/DealSlip.domain]
+### DSGEN: 2020-11-30 01:31:25,730 INFO  c.o.w.generation.GenerationCommon,594: Completed successfully generating code for cartridge T24 Interaction Framework (RIM): Resource model (RIM) from T24 models, it took 0,019s
+### DSGEN: 2020-11-30 01:31:25,730 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 561 MB, free: 296 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:25,731 INFO  DSGeneratorTiming,314: Completed at: 2020.11.30 01:31:25
+### DSGEN: 2020-11-30 01:31:25,733 INFO  DSGeneratorTiming,316: Took: 0,023s
+### DSGEN: 2020-11-30 01:31:25,734 INFO  DSGeneratorTiming,317: Number of models used by this generator: 14
+### DSGEN: 2020-11-30 01:31:25,735 INFO  DSGeneratorTiming,318: ----------------------------------------------------------------------------
+
+### DSGEN: 2020-11-30 01:31:25,737 INFO  DSGeneratorTiming,289: T24 API Generation: T24 API for Local Application Generator 
+
+### DSGEN: 2020-11-30 01:31:25,739 INFO  DSGeneratorTiming,290: Started at: 2020.11.30 01:31:25
+### DSGEN: 2020-11-30 01:31:25,740 INFO  c.o.w.generation.GenerationCommon,582: Generating code, cartridge T24 API Generation: T24 API for Local Application into F/Prospect-models-gen/src/t24api ...
+### DSGEN: 2020-11-30 01:31:25,771 INFO  c.o.w.generation.GenerationCommon,594: Completed successfully generating code for cartridge T24 API Generation: T24 API for Local Application, it took 0,030s
+### DSGEN: 2020-11-30 01:31:25,772 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 563 MB, free: 293 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:25,772 INFO  DSGeneratorTiming,314: Completed at: 2020.11.30 01:31:25
+### DSGEN: 2020-11-30 01:31:25,773 INFO  DSGeneratorTiming,316: Took: 0,034s
+### DSGEN: 2020-11-30 01:31:25,773 INFO  DSGeneratorTiming,317: Number of models used by this generator: 12
+### DSGEN: 2020-11-30 01:31:25,774 INFO  DSGeneratorTiming,318: ----------------------------------------------------------------------------
+
+### DSGEN: 2020-11-30 01:31:25,775 INFO  c.o.w.generation.GenerationCommon,345: Completed running all new style code generators, and (should) have freed up up memory used by them
+### DSGEN: 2020-11-30 01:31:25,775 INFO  c.o.w.generation.GenerationCommon,24: Heap stats; used: 563 MB, free: 293 MB, total: 857 MB, max: 1820 MB
+### DSGEN: 2020-11-30 01:31:25,775 INFO  c.o.w.generation.GenerationCommon,198: Completed all code generation cartridges, in total it took 2,729s
+### DSGEN: 2020-11-30 01:31:25,776 WARN  DSGeneratorSummary,358: Generation started   at : 2020.11.30 01:31:23
+### DSGEN: 2020-11-30 01:31:25,778 WARN  DSGeneratorSummary,373: Generation completed at : 2020.11.30 01:31:25 (took : 2,729s)
+### DSGEN: 2020-11-30 01:31:25,779 WARN  DSGeneratorSummary,375: Total of 0 errors.
+### DSGEN: 2020-11-30 01:31:25,780 INFO  c.o.w.generation.headless.RunGeneration,357: Code generation for project 'Prospect-models' SUCCESSFULLY done.
+### DSGEN: 2020-11-30 01:31:25,786 INFO  c.o.w.generation.headless.RunGeneration,129: DS Generator finished successfully and terminates now (total took 8,658s).

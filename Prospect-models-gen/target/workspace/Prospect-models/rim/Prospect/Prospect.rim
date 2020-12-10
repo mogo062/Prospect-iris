@@ -1,0 +1,59 @@
+domain Prospect {
+    use common.HTTPEvents.*
+    use common.CoreCommands.*
+    use common.ODataCommands.*
+    use common.T24Events.*
+    use common.T24Commands.*
+    use T24.*
+    rim Prospect {
+        basepath: "/{companyid}"
+
+        // Define the $metadata resource for OData 
+        // (note, this is an out of band resource meaning there are no links to the metadata from our service
+        resource ODataMetadata {
+            type: item
+            entity: Metadata
+            view: GETMetadata
+            path: "/$metadata"
+        }
+        
+        initial resource ServiceDocument {
+            type: item
+            entity: ServiceDocument
+            view: GETServiceDocument
+            path: "/"
+
+            GET -> T24FieldMetadata
+            GET -> T24.enqCustomer.enqCustomer
+            GET -> T24.enqAccountList.enqAccountList
+            GET -> T24.enqAccountList.enqAccountListByCustomer
+            GET -> common.Errors.Errors
+
+        }
+
+        exception resource InteractionException {
+            type: item
+            entity: InteractionException
+            view: GETException
+        }
+        resource T24FieldMetadata {
+            type: collection
+            entity: T24FieldMetadata
+            actions [T24FieldMetadata]
+            relations [ "http://temenostech.temenos.com/rels/metadata" ]
+            path: "/T24FieldMetadata()"
+        }
+    }
+
+    rim Metadata {
+        initial resource MetadataBase {
+            type: item
+            entity: Metadata
+            view: GETMetadata
+            path: "/$metadata"
+            GET ->> Prospect.ODataMetadata {
+                parameters [ companyid="{DefaultCompany}" ]
+            }
+        }
+    }
+}

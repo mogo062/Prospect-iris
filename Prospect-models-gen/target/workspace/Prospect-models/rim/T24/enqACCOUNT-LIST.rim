@@ -1,0 +1,86 @@
+domain T24 {
+    use common.CoreCommands.*
+    use common.HTTPEvents.*
+    use common.ODataCommands.*
+    use common.T24Commands.*
+    use common.T24Events.*
+    use common.NextState.*
+    rim enqAccountList {
+        command GETEntities
+        command GETEntity
+        basepath: "/{companyid}"
+    
+        resource enqAccountLists {
+            type: collection
+            entity: enqAccountList
+            commands [ GET : GETEntities {
+                properties [ filter = "{filter}" ]
+                } ]
+            path: "/enqAccountLists()"
+            GET *-> enqAccountList {
+                parameters [ id = "{Acc}" ]
+            }
+            
+           
+            GET *-> "T24.verAccount.verAccount_see" {
+                parameters [ id = "{Acc}",t24Intent = "View" ]
+                title: "Account details"
+                id: "1"
+                field: "Acc"
+            }
+            GET *-> "T24.verEbContractBalances_Ac.verEbContractBalances_Ac_see" {
+                parameters [ id = "{Acc}",t24Intent = "View" ]
+                title: "Balance details"
+                id: "2"
+                field: "Acc"
+            }
+            GET *-> "T24.verCustomerAccount.verCustomerAccount_see" {
+                parameters [ id = "{Customer}",t24Intent = "View" ]
+                title: "View "
+                id: "3"
+                field: "Customer"
+            }
+             GET *-> enqAccountListByCustomer {
+                parameters [ filter = "Customer eq '{Customer}'" ]
+                title: "Account List"
+                id: "4"
+                field: "Customer"
+            }
+        }
+    
+        resource enqAccountList {
+            type: item
+            entity: enqAccountList
+            commands [ GET : GETEntity ]
+            path: "/enqAccountLists('{id}')"
+        }
+        
+        resource enqAccountListByCustomer {
+            type: collection
+            entity: enqAccountList
+            commands [ GET : GETEntities {
+               properties [ filter = "{filter}" ]
+            } ]
+            path: "/enqAccountListsByCustomer('{Customer}')"
+            
+        }
+        
+        resource enqAccountLists_Print {
+            type: collection
+            entity: enqAccountList
+            commands [ GET : GETEntities {
+                properties [ filter = "{filter}" ]
+                } ]
+            path: "/enqAccountLists()/Print"
+        }
+    
+        resource enqAccountList_Print {
+            type: item
+            entity: enqAccountList
+            commands [ GET : GETEntity ]
+            path: "/enqAccountLists('{id}')/Print"
+        }
+    
+    }
+    
+}

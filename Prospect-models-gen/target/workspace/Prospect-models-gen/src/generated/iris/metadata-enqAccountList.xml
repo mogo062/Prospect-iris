@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Metadata ModelName="Prospect-models" Version="1.0"
+        xmlns="http://iris.temenos.com/metadata.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://iris.temenos.com metadata.xsd">
+    <Entity Name="enqAccountList">
+        <Property Name="Acc">
+            <Term Name="TERM_ID_FIELD">true</Term>
+        </Property>
+        <Property Name="Header">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="Ccy" />
+        <Property Name="Customer" />
+        <Property Name="AccMnemonic" />
+        <Property Name="WorkBal" />
+        <Property Name="AccShortname">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="LimRef" />
+        <Property Name="Category" />
+        <Property Name="Custmnemonic">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="Amount">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="Cleared">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="LockAmt">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="UseBalance">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="Id">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="Currency">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="AccountOfficer">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="PostingRestrict">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="JointHolder">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="ArrangementId">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+    </Entity>
+</Metadata>

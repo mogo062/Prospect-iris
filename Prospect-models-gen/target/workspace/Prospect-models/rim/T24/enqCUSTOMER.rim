@@ -1,0 +1,74 @@
+domain T24 {
+    use common.CoreCommands.*
+    use common.HTTPEvents.*
+    use common.ODataCommands.*
+    use common.T24Commands.*
+    use common.T24Events.*
+    use common.NextState.*
+    rim enqCustomer {
+        command GETEntities
+        command GETEntity
+        basepath: "/{companyid}"
+    
+        resource enqCustomers {
+            type: collection
+            entity: enqCustomer
+            commands [ GET : GETEntities {
+                properties [ filter = "{filter}" ]
+                } ]
+            path: "/enqCustomers()"
+            GET *-> enqCustomer {
+                parameters [ id = "{Id}" ]
+            }
+            GET *-> "T24.verCustomer.verCustomer_see" {
+                parameters [ id = "{Id}",t24Intent = "View" ]
+                title: "View Record"
+                id: "1"
+                field: "Id"
+            }
+            GET *-> "T24.enqListLoans.enqListLoanss" {
+                parameters [ filter = "CustomerNo eq '{Id}'" ]
+                title: "Primarily & Jointly held Loans"
+                id: "2"
+                field: "Id"
+            }
+            GET *-> "T24.enqCustomerPositionSummary.enqCustomerPositionSummarys" {
+                parameters [ filter = "CustomerNo eq '{Id}'" ]
+                title: "Customer Position Summary"
+                id: "3"
+                field: "Id"
+            }
+            GET *-> "T24.enqLiab.enqLiabs" {
+                parameters [ filter = "LiabilityNumber eq '{Id}'" ]
+                title: "Customer Liability"
+                id: "4"
+                field: "Id"
+            }
+        }
+    
+        resource enqCustomer {
+            type: item
+            entity: enqCustomer
+            commands [ GET : GETEntity ]
+            path: "/enqCustomers('{id}')"
+        }
+    
+        resource enqCustomers_Print {
+            type: collection
+            entity: enqCustomer
+            commands [ GET : GETEntities {
+                properties [ filter = "{filter}" ]
+                } ]
+            path: "/enqCustomers()/Print"
+        }
+    
+        resource enqCustomer_Print {
+            type: item
+            entity: enqCustomer
+            commands [ GET : GETEntity ]
+            path: "/enqCustomers('{id}')/Print"
+        }
+    
+    }
+    
+}

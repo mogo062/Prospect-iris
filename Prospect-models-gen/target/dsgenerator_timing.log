@@ -1,0 +1,48 @@
+Migration and loading of models Projects
+
+Started at 2020.11.30 01:31:22
+Completed at: 2020.11.30 01:31:23
+Took: 0,434s
+Total number of models: 26
+----------------------------------------------------------------------------
+
+Pre Loading and validation of Resources in Standalone Headless 
+
+Started at: 2020.11.30 01:31:23
+Completed at: 2020.11.30 01:31:24
+Took: 1,086s
+Total number of resources: 26
+----------------------------------------------------------------------------
+
+T24 Interaction Framework (IRIS): Java classes from IRIS RIM model Generator 
+
+Started at: 2020.11.30 01:31:24
+Completed at: 2020.11.30 01:31:24
+Took: 0,362s
+Number of models used by this generator: 12
+----------------------------------------------------------------------------
+
+T24 Interaction Framework (IRIS) Metadata: Configuration (metadata.xml, *.properties) Generator 
+
+Started at: 2020.11.30 01:31:24
+Completed at: 2020.11.30 01:31:25
+Took: 1,157s
+Number of models used by this generator: 14
+----------------------------------------------------------------------------
+
+T24 Interaction Framework (RIM): Resource model (RIM) from T24 models Generator 
+
+Started at: 2020.11.30 01:31:25
+Completed at: 2020.11.30 01:31:25
+Took: 0,023s
+Number of models used by this generator: 14
+----------------------------------------------------------------------------
+
+T24 API Generation: T24 API for Local Application Generator 
+
+Started at: 2020.11.30 01:31:25
+Completed at: 2020.11.30 01:31:25
+Took: 0,034s
+Number of models used by this generator: 12
+----------------------------------------------------------------------------
+

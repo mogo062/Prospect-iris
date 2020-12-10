@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Copyright (C) 2012 - 2013 Temenos Holdings N.V.
+ -->
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
+	xsi:schemaLocation="
+		http://www.springframework.org/schema/util 
+		http://www.springframework.org/schema/util/spring-util.xsd
+		http://www.springframework.org/schema/beans
+		http://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context
+		http://www.springframework.org/schema/context/spring-context.xsd"
+		default-lazy-init="true">
+
+<!-- Define Spring bean for resource : CheckIfError -->
+<!-- begin spring bean for state : common_Errors-CheckIfError -->
+<bean id="common_Errors-CheckIfError" class="com.temenos.interaction.core.hypermedia.ResourceState">
+	<constructor-arg name="entityName" value="Errors" />
+	<constructor-arg name="name" value="CheckIfError" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg name="name" value="CheckIfError" />
+			<constructor-arg name="type" value="VIEW" />
+			<constructor-arg name="props"><null /></constructor-arg>
+			<constructor-arg name="method" value="GET" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/CheckIfError" />
+	<constructor-arg name="rels">
+		<null />
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><null /></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : common_Errors-CheckIfError -->		
+<!-- Define Spring bean for resource : ProcessErrors -->
+<!-- begin spring bean for state : common_Errors-ProcessErrors -->
+<bean id="common_Errors-ProcessErrors" class="com.temenos.interaction.core.hypermedia.ResourceState">
+	<constructor-arg name="entityName" value="Errors" />
+	<constructor-arg name="name" value="ProcessErrors" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg name="name" value="ErrorCommand" />
+			<constructor-arg name="type" value="VIEW" />
+			<constructor-arg name="props"><null /></constructor-arg>
+			<constructor-arg name="method" value="GET" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/errors" />
+	<constructor-arg name="rels">
+		<array>
+		<value><![CDATA[http://temenostech.temenos.com/rels/errors]]></value>
+		</array>
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><bean class="com.temenos.interaction.core.hypermedia.UriSpecification"><constructor-arg name="name" value="ProcessErrors" /><constructor-arg name="template" value="/errors" /></bean></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : common_Errors-ProcessErrors -->		
+<!-- Define Spring bean for resource : Errors -->
+<!-- begin spring bean for state : common_Errors-Errors -->
+<bean id="common_Errors-Errors" class="com.temenos.interaction.core.hypermedia.CollectionResourceState">
+	<constructor-arg name="entityName" value="Errors" />
+	<constructor-arg name="name" value="Errors" />
+	<constructor-arg>
+		<list>
+		<bean class="com.temenos.interaction.core.hypermedia.Action">
+			<constructor-arg value="NoopGET" />
+			<constructor-arg value="VIEW" />
+		</bean>
+		</list>
+	</constructor-arg>
+	<constructor-arg name="path" value="/Errors" />
+	<constructor-arg name="rels">
+		<null />
+	</constructor-arg>
+	<constructor-arg name="uriSpec"><null /></constructor-arg>
+	<constructor-arg name="errorState"><null /></constructor-arg>
+	
+	<!-- Start property transitions list -->
+	<property name="transitions">
+		<list>
+		<!-- create transitions  -->
+		</list>
+	</property>
+</bean>	
+<!-- end spring bean for state : common_Errors-Errors -->		
+</beans>

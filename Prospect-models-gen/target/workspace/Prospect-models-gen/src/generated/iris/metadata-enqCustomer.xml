@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Metadata ModelName="Prospect-models" Version="1.0"
+        xmlns="http://iris.temenos.com/metadata.xsd"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://iris.temenos.com metadata.xsd">
+    <Entity Name="enqCustomer">
+        <Property Name="Id">
+            <Term Name="TERM_ID_FIELD">true</Term>
+        </Property>
+        <Property Name="Header">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="Mnemonic" />
+        <Property Name="ShortNameMvGroup">
+            <Term Name="TERM_LIST_TYPE">true</Term>
+            <Property Name="ShortName" />
+        </Property>
+        <Property Name="StreetMvGroup">
+            <Term Name="TERM_LIST_TYPE">true</Term>
+            <Property Name="Street" />
+        </Property>
+        <Property Name="TownCountryMvGroup">
+            <Term Name="TERM_LIST_TYPE">true</Term>
+            <Property Name="TownCountry" />
+        </Property>
+        <Property Name="Sector" />
+        <Property Name="SectorName">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="IndDesc">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="TargetDesc">
+            <Term Name="TERM_RESTRICTION">displayOnly</Term>
+        </Property>
+        <Property Name="Nationality" />
+        <Property Name="CustomerStatus" />
+        <Property Name="Residence" />
+        <Property Name="CustomerLiability" />
+        <Property Name="RelationCode">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="RelCustomer">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="AccountOfficer">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="Industry">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="Target">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="Introducer">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="ReviewFrequency">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+        <Property Name="BirthIncorpDate">
+            <Term Name="TERM_RESTRICTION">filterOnly</Term>
+        </Property>
+    </Entity>
+</Metadata>
