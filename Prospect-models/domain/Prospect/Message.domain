@@ -1,0 +1,17 @@
+# UTF-8
+Domain Message
+    @java:Package (value=t24.hothouse)
+namespace "http://www.odcgroup.com/messages"
+metamodelVersion 4.3.0.20110527
+Classes {
+    Messages {
+            Messages -> byValue Message:Messages__Message * PK
+    }
+    Messages__Message
+    {
+        Code : mml:string
+        Info : mml:string
+        Text : mml:string
+        Type : mml:string
+    }
+}

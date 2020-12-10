@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE beans PUBLIC "-//SPRING//DTD BEAN//EN" "http://www.springframework.org/dtd/spring-beans-2.0.dtd">
+<beans>
+    <!--
+    Temenos Application Framework Runtime Environment : TAFJ
+    Use connection.properties to Configure TAFJ Environment with DEFAULT as CHANNEL_ID
+    -->
+
+    <!-- INMem bean configuration for Channel Id DEFAULT -->
+	<bean id="ResourceProviderServiceProvider" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServiceProviderImplTAFJ"
+		scope="prototype" />
+
+    <!-- minIdle is to be set to number of CPU cores and the maxSize to be set to three times number of CPU cores -->
+	<bean id="ResourceProviderServiceAPIPool" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServicePoolExt">
+		<property name="targetBeanName" value="ResourceProviderServiceImpl" />
+		<property name="maxSize" value="25" />
+		<property name="minIdle" value="10" />
+		<property name="maxWait" value="60000" />
+		<!-- Enable this property to destroy T24 sessions -->
+		<!-- <property name="minEvictableIdleTimeMillis" value="480000" />
+		<property name="timeBetweenEvictionRunsMillis" value="600000" /> -->
+	</bean>
+
+	<bean id="ResourceProviderServiceImpl" class="com.temenos.services.resourceprovider.ResourceProviderServiceImpl"
+		scope="prototype">
+		<constructor-arg type="com.temenos.soa.services.RuntimeProperties" ref="RuntimeProperties" />
+	</bean>
+
+	<bean id="RuntimeProperties" class="com.temenos.soa.services.RuntimeProperties">
+		<constructor-arg>
+			<map>
+				<entry key="OFS_SOURCE" value="IRISPA" />
+			</map>
+		</constructor-arg>
+		<property name="superTransaction" value="false" />
+	</bean>
+
+    <!-- INMem bean configuration for Channel Id INTERNET -->
+	<bean id="ResourceProviderServiceProviderInternet" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServiceProviderImplTAFJ"
+		scope="prototype">
+		<constructor-arg value="ResourceProviderServiceAPIPoolInternet" />
+	</bean>
+
+    <!-- minIdle is to be set to number of CPU cores and the maxSize to be set to three times number of CPU cores -->
+	<bean id="ResourceProviderServiceAPIPoolInternet" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServicePoolExt">
+		<property name="targetBeanName" value="ResourceProviderServiceImplInternet" />
+		<property name="maxSize" value="50" />
+		<property name="minIdle" value="10" />
+		<property name="maxWait" value="60000" />
+		<!-- Enable this property to destroy T24 sessions -->
+		<!-- <property name="minEvictableIdleTimeMillis" value="480000" />
+		<property name="timeBetweenEvictionRunsMillis" value="600000" /> -->
+	</bean>
+
+	<bean id="ResourceProviderServiceImplInternet" class="com.temenos.services.resourceprovider.ResourceProviderServiceImpl"
+		scope="prototype">
+		<constructor-arg type="com.temenos.soa.services.RuntimeProperties" ref="RuntimePropertiesInternet" />
+	</bean>
+
+	<bean id="RuntimePropertiesInternet" class="com.temenos.soa.services.RuntimeProperties">
+		<constructor-arg>
+			<map>
+				<entry key="OFS_SOURCE" value="TCSARCIB" />
+			</map>
+		</constructor-arg>
+		<property name="superTransaction" value="false" />
+	</bean>
+
+    <!-- INMem bean configuration for Channel Id BRANCH -->
+	<bean id="ResourceProviderServiceProviderBranch" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServiceProviderImplTAFJ"
+		scope="prototype">
+		<constructor-arg value="ResourceProviderServiceAPIPoolBranch" />
+	</bean>
+
+    <!-- minIdle is to be set to number of CPU cores and the maxSize to be set to three times number of CPU cores -->
+	<bean id="ResourceProviderServiceAPIPoolBranch" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServicePoolExt">
+		<property name="targetBeanName" value="ResourceProviderServiceImplBranch" />
+		<property name="maxSize" value="25" />
+		<property name="minIdle" value="10" />
+		<property name="maxWait" value="60000" />
+		<!-- Enable this property to destroy T24 sessions -->
+		<!-- <property name="minEvictableIdleTimeMillis" value="480000" />
+		<property name="timeBetweenEvictionRunsMillis" value="600000" /> -->
+	</bean>
+
+	<bean id="ResourceProviderServiceImplBranch" class="com.temenos.services.resourceprovider.ResourceProviderServiceImpl"
+		scope="prototype">
+		<constructor-arg type="com.temenos.soa.services.RuntimeProperties" ref="RuntimePropertiesBranch" />
+	</bean>
+
+	<bean id="RuntimePropertiesBranch" class="com.temenos.soa.services.RuntimeProperties">
+		<constructor-arg>
+			<map>
+				<entry key="OFS_SOURCE" value="IRISPA" />
+			</map>
+		</constructor-arg>
+		<property name="superTransaction" value="false" />
+	</bean>
+
+    <!-- T24 Service for Health Check Service so that we do not disrupt live services -->
+	<bean id="HealthCheckResourceProviderServiceProvider" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServiceProviderImplTAFJ">
+		<constructor-arg ref="ServiceHandlerHealthCheck" />
+		<constructor-arg value="ResourceProviderServiceAPIPoolHealthCheck" />
+	</bean>
+
+	<bean id="ServiceHandlerHealthCheck" class="com.temenos.interaction.utils.provider.tafj.T24HealthCheckServiceHandler" />
+
+    <!-- minIdle is to be set to number of CPU cores and the maxSize to be set to three times number of CPU cores -->
+	<bean id="ResourceProviderServiceAPIPoolHealthCheck" class="com.temenos.services.resourceprovider.tafj.ResourceProviderServicePoolExt">
+		<property name="targetBeanName" value="ResourceProviderServiceImplHealthCheck" />
+		<property name="maxSize" value="5" />
+		<property name="minIdle" value="10" />
+		<property name="maxWait" value="60000" />
+		<!-- Enable this property to destroy T24 sessions -->
+		<!-- <property name="minEvictableIdleTimeMillis" value="480000" />
+		<property name="timeBetweenEvictionRunsMillis" value="600000" /> -->
+	</bean>
+
+	<bean id="ResourceProviderServiceImplHealthCheck" class="com.temenos.services.resourceprovider.ResourceProviderServiceImpl"
+		scope="prototype">
+		<constructor-arg type="com.temenos.soa.services.RuntimeProperties" ref="RuntimePropertiesHealthCheck" />
+	</bean>
+
+	<bean id="RuntimePropertiesHealthCheck" class="com.temenos.soa.services.RuntimeProperties">
+		<constructor-arg>
+			<map>
+                <!-- Make sure we use PRE-PREAUTHENTICATED OFS Source here to skip Authentication errors -->
+				<entry key="OFS_SOURCE" value="IRISPA" />
+			</map>
+		</constructor-arg>
+		<property name="superTransaction" value="false" />
+        <!-- For Embedded Server we need following property -->
+		<property name="appServerMode" value="true" />
+	</bean>
+
+</beans>

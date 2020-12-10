@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>com.temenos.examples</groupId>
+		<artifactId>testds</artifactId>
+		<version>20.57</version>
+		<relativePath>../Prospect-iris-parent/pom.xml</relativePath>
+	</parent>
+
+	<artifactId>Prospect-iris</artifactId>
+	<name>Prospect-iris</name>
+	<packaging>jar</packaging>
+
+	<url>http://www.temenos.com</url>
+
+	<properties>
+		<skipProfilePluginExecution>false</skipProfilePluginExecution>
+		<project-name>Prospect</project-name>
+		<frameworkPackaging>tafj</frameworkPackaging>
+	</properties>
+
+	<dependencies>
+        <!-- DS generated artifacts -->
+		<dependency>
+			<groupId>com.temenos.ds.models</groupId>
+			<artifactId>Prospect-models-gen</artifactId>
+			<version>${project.version}</version>
+			<classifier>iris-metadata</classifier>
+		</dependency>
+        
+        <!-- T24 Authenticator -->
+		<dependency>
+			<groupId>com.temenos.technology</groupId>
+			<artifactId>T24Authenticator</artifactId>
+			<classifier>tafj</classifier>
+		</dependency>
+        
+        <!-- Media Types -->
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>interaction-media-xhtml</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>interaction-media-odata-xml</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>interaction-media-hal</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+        
+         <!-- Swagger -->
+       
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>interaction-sdk</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>useragent-generic-java</artifactId>
+			<scope>runtime</scope>
+			<exclusions>
+				<exclusion>
+					<groupId>org.slf4j</groupId>
+					<artifactId>slf4j-simple</artifactId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>useragent-hal-inspector</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		<dependency>
+			<groupId>com.temenos.interaction</groupId>
+			<artifactId>useragent-swagger-ui</artifactId>
+			<scope>runtime</scope>
+		</dependency>
+		
+         
+        <!-- Swagger-->   
+                
+        <!-- Test Dependencies -->
+		<dependency>
+			<groupId>com.temenos.technology</groupId>
+			<artifactId>T24InteractionTests</artifactId>
+			<version>${t24AdapterForIrisVersion}</version>
+			<scope>test</scope>
+			<exclusions>
+				<exclusion>
+					<artifactId>jersey-bundle</artifactId>
+					<groupId>com.sun.jersey</groupId>
+				</exclusion>
+				<exclusion>
+					<artifactId>jersey-server</artifactId>
+					<groupId>com.sun.jersey</groupId>
+				</exclusion>
+			</exclusions>
+		</dependency>
+	</dependencies>
+
+	<profiles>
+		<profile>
+			<id>buildForTAFC</id>
+			<activation>
+				<activeByDefault>false</activeByDefault>
+				<property>
+					<name>frameworkPackaging</name>
+					<value>tafc</value>
+				</property>
+			</activation>
+			<build>
+				<plugins>
+                <!-- Copy profile specific configs into target folder -->
+					<plugin>
+						<artifactId>maven-resources-plugin</artifactId>
+						<version>${maven.resources.plugin}</version>
+						<executions>
+							<execution>
+								<id>copy-inmemory-webapp-resources</id>
+								<phase>process-resources</phase>
+								<goals>
+									<goal>copy-resources</goal>
+								</goals>
+								<configuration>
+									<encoding>UTF-8</encoding>
+									<overwrite>true</overwrite>
+									<outputDirectory>${project.build.directory}/${project.build.finalName}</outputDirectory>
+									<resources>
+										<resource>
+											<directory>${basedir}/src/main/webappConfig/tafc</directory>
+											<filtering>false</filtering>
+										</resource>
+                                        <!-- rtc snapshot if available -->
+										<resource>
+											<directory>${basedir}</directory>
+											<includes>
+												<include>rtc*.json</include>
+											</includes>
+                                        <!-- <filtering>true</filtering> -->
+										</resource>
+									</resources>
+								</configuration>
+							</execution>
+						</executions>
+					</plugin>
+                    <!-- Package WAR -->
+					<plugin>
+						<artifactId>maven-war-plugin</artifactId>
+						<version>${maven.war.plugin.version}</version>
+						<configuration>
+							<classifier>tafc</classifier>
+							<webXml>${basedir}/src/main/webappConfig/tafc/WEB-INF/web.xml</webXml>
+							<failOnMissingWebXml>true</failOnMissingWebXml>
+							<webappDirectory>${project.build.directory}/${project.build.finalName}</webappDirectory>
+							<packagingExcludes>
+								WEB-INF/weblogic.xml,
+								WEB-INF/lib/t24-EB_*tafj*.jar,
+								WEB-INF/lib/*tafj*.jar,
+							</packagingExcludes>
+						</configuration>
+						<executions>
+							<execution>
+								<id>produce-tafc-war</id>
+								<goals>
+									<goal>war</goal>
+								</goals>
+								<phase>prepare-package</phase>
+							</execution>
+							<execution>
+								<id>default-war</id>
+								<phase>none</phase>
+							</execution>
+						</executions>
+					</plugin>
+				</plugins>
+			</build>
+			<dependencies>
+				<dependency>
+					<groupId>com.temenos.tafj</groupId>
+					<artifactId>tComponentFramework</artifactId>
+					<version>${tafj.version}</version>
+					<exclusions>
+						<exclusion>
+							<groupId>com.temenos.tafj</groupId>
+							<artifactId>TAFJCore</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>com.temenos.tafj</groupId>
+							<artifactId>TAFJBASIC</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>com.temenos.tafj</groupId>
+							<artifactId>TAFJClient</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>com.temenos.tafj</groupId>
+							<artifactId>TAFJCommon</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>com.temenos.tocfee</groupId>
+							<artifactId>tocfT24ra</artifactId>
+						</exclusion>
+					</exclusions>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.technology</groupId>
+					<artifactId>T24Authenticator</artifactId>
+					<version>${t24AdapterForIrisVersion}</version>
+					<classifier>tafc</classifier>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.t24.external.service.eb_catalogservice.data</groupId>
+					<artifactId>t24-EB_CatalogService-Data</artifactId>
+					<version>${t24.catalogService.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.t24.external.service.eb_resourceproviderservice.data</groupId>
+					<artifactId>t24-EB_ResourceProviderService-Data</artifactId>
+					<version>${t24ResourceProviderVersion}</version>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.t24.external.service.eb_catalogservice.ws</groupId>
+					<artifactId>t24-EB_CatalogService-provider</artifactId>
+					<version>${t24.catalogService.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.t24.external.service.eb_resourceproviderservice.ws</groupId>
+					<artifactId>t24-EB_ResourceProviderService-provider</artifactId>
+					<version>${t24ResourceProviderVersion}</version>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.t24.external.service.eb_authenticationservice.ws</groupId>
+					<artifactId>t24-EB_AuthenticationService-provider</artifactId>
+					<version>${t24.authenticationservice.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.t24.external.service.eb_authenticationservice.data</groupId>
+					<artifactId>t24-EB_AuthenticationService-Data</artifactId>
+					<version>${t24.authenticationservice.version}</version>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.technology</groupId>
+					<artifactId>T24Authenticator</artifactId>
+					<version>${t24AdapterForIrisVersion}</version>
+                <!-- We need to exclude TAFJ lib as it can cause issues at runtime -->
+					<exclusions>
+						<exclusion>
+							<groupId>com.temenos.t24.external.service.eb_authenticationservice.ws</groupId>
+							<artifactId>t24-EB_AuthenticationService-tafj-provider</artifactId>
+						</exclusion>
+					</exclusions>
+				</dependency>
+				<dependency>
+					<groupId>com.temenos.technology</groupId>
+					<artifactId>T24Commands</artifactId>
+					<version>${t24AdapterForIrisVersion}</version>
+                    <!-- We need to exclude TAFJ lib as it can cause issues at runtime -->
+					<exclusions>
+						<exclusion>
+							<groupId>com.temenos.t24.external.service.eb_catalogservice.ws</groupId>
+							<artifactId>t24-EB_CatalogService-tafj-provider</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>com.temenos.t24.external.service.eb_resourceproviderservice.ws</groupId>
+							<artifactId>t24-EB_ResourceProviderService-tafj-provider</artifactId>
+						</exclusion>
+						<exclusion>
+							<groupId>com.temenos.technology</groupId>
+							<artifactId>T24SmsProvider</artifactId>
+						</exclusion>
+					</exclusions>
+				</dependency>
+			</dependencies>
+		</profile>
+	</profiles>
+</project>
